@@ -1,19 +1,19 @@
 class Account:
-    def __init__(self, name: str, balance: 0.0) -> None:
+    def __init__(self, name:str) -> None:
         """
         Constructor to create initial stae of a person object
         :param name: person's name
         :param balance: person's balance
         """
         self.__account_name = name
-        self.__account_balance = balance
+        self.__account_balance = 0
 
 
     def deposit(self, amount: float) -> bool:
         """
         Compute balance after deposit
         :param amount: deposit amount
-        :return: result on whether transaction is successful or unsuccessful
+        :return: false when transaction is unsuccessful, true when transaction is successful
         """
         if amount <= 0:
             return False
@@ -26,7 +26,7 @@ class Account:
         """
         Compute balance after withdraw
         :param amount: withdraw amount
-        :return: result on whether transaction is successful or unsuccessful
+        :return: false when transaction is unsuccessful, true when transaction is successful
         """
         if amount > self.__account_balance or amount <= 0:
             return False
