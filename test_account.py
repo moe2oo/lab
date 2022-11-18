@@ -19,5 +19,5 @@ class Test:
     def test_withdraw(self):
         assert self.p1.withdraw(500) == False
         assert self.p1.withdraw(0) == False
-        assert self.p1.withdraw(2) == False
+        assert self.p1.withdraw(2) == True
 
